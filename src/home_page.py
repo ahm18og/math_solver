@@ -1,4 +1,3 @@
-# home_page.py
 import sys
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -45,43 +44,37 @@ class MathSolver(QMainWindow):
 
         font = QFont()
         font.setPointSize(14)
-
-        # Basic Math Button
+        
         self.basic_button = QPushButton('Basic Math')
         self.basic_button.setFont(font)
         self.basic_button.setStyleSheet("background-color: #87CEEB; color: white;")
         self.basic_button.clicked.connect(self.showBasicSolver)
         layout.addWidget(self.basic_button, 0, 0)
 
-        # Algebraic Equation Button
         self.algebraic_button = QPushButton('Algebraic Equation')
         self.algebraic_button.setFont(font)
         self.algebraic_button.setStyleSheet("background-color: #87CEEB; color: white;")
         self.algebraic_button.clicked.connect(self.showAlgebraicSolver)
         layout.addWidget(self.algebraic_button, 0, 1)
 
-        # Rectangular Area Button
         self.rectangular_button = QPushButton('Rectangular Area')
         self.rectangular_button.setFont(font)
         self.rectangular_button.setStyleSheet("background-color: #87CEEB; color: white;")
         self.rectangular_button.clicked.connect(self.showRectangularSolver)
         layout.addWidget(self.rectangular_button, 1, 0)
 
-        # Pythagorean Theorem Button
         self.pythagorean_button = QPushButton('Pythagorean Theorem')
         self.pythagorean_button.setFont(font)
         self.pythagorean_button.setStyleSheet("background-color: #87CEEB; color: white;")
         self.pythagorean_button.clicked.connect(self.showPythagoreanTheorem)
         layout.addWidget(self.pythagorean_button, 1, 1)
 
-        # Calculate Arc Length / Area of Sector Button
         self.arc_length_button = QPushButton('Calculate Arc Length / Area of Sector')
         self.arc_length_button.setFont(font)
         self.arc_length_button.setStyleSheet("background-color: #87CEEB; color: white;")
         self.arc_length_button.clicked.connect(self.showArcLengthSolver)
         layout.addWidget(self.arc_length_button, 2, 0)
 
-        # Quit Button
         self.quit_button = QPushButton('Quit')
         self.quit_button.setFont(font)
         self.quit_button.setStyleSheet("background-color: #FF6347; color: white;")
