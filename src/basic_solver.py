@@ -13,19 +13,16 @@ class BasicSolver(QWidget):
         font = QFont()
         font.setPointSize(14)
 
-        # Input label
         self.input_label = QLabel('Enter your math problem:')
         self.input_label.setFont(font)
         layout.addWidget(self.input_label)
 
-        # Input line
         self.input_line = QLineEdit()
         self.input_line.setFont(font)
         self.input_line.setToolTip('You must enter something')
         self.input_line.setPlaceholderText("Enter your basic math problem, i.e. '1 + 1'")
         layout.addWidget(self.input_line)
 
-        # Solve button
         self.solve_button = QPushButton('Solve')
         self.solve_button.setFont(font)
         self.solve_button.setToolTip('Click to solve the problem')
@@ -34,14 +31,12 @@ class BasicSolver(QWidget):
         self.solve_button.clicked.connect(self.solve_problem)
         layout.addWidget(self.solve_button)
 
-        # Result label
         self.result_label = QLabel('Result:')
         self.result_label.setFont(font)
         self.result_label.setAlignment(Qt.AlignCenter)
         self.result_label.setStyleSheet("color: #4CAF50; font-weight: bold;")
         layout.addWidget(self.result_label)
 
-        # Result text area
         self.result_area = QTextEdit()
         self.result_area.setFont(font)
         self.result_area.setToolTip('The result will appear here once you press \'Enter\' on your keyboard or click the \'Solve\' button.')
@@ -50,7 +45,6 @@ class BasicSolver(QWidget):
         self.result_area.setStyleSheet("background-color: #f0f0f0; border: 1px solid #87CEEB;")
         layout.addWidget(self.result_area)
 
-        # Back to Homepage button
         self.back_home_button = QPushButton('Back to Homepage')
         self.back_home_button.setFont(font)
         self.back_home_button.setToolTip('Exit to the home page')
