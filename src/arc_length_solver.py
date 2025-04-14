@@ -1,4 +1,3 @@
-# arc_length_solver.py
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -14,7 +13,6 @@ class ArcLengthSolver(QWidget):
         font = QFont()
         font.setPointSize(14)
 
-        # Styling for labels and inputs
         self.radius_label = QLabel('Enter radius:')
         self.radius_label.setFont(font)
         layout.addWidget(self.radius_label, 0, 0)
@@ -31,28 +29,24 @@ class ArcLengthSolver(QWidget):
         self.angle_input.setFont(font)
         layout.addWidget(self.angle_input, 1, 1)
 
-        # Arc Length Button
         self.arc_length_button = QPushButton('Calculate Arc Length')
         self.arc_length_button.setFont(font)
         self.arc_length_button.setStyleSheet("background-color: #87CEEB; color: white;")
         self.arc_length_button.clicked.connect(self.calculate_arc_length)
         layout.addWidget(self.arc_length_button, 2, 0)
 
-        # Area of Sector Button
         self.area_sector_button = QPushButton('Calculate Area of Sector')
         self.area_sector_button.setFont(font)
         self.area_sector_button.setStyleSheet("background-color: #87CEEB; color: white;")
         self.area_sector_button.clicked.connect(self.calculate_area_of_sector)
         layout.addWidget(self.area_sector_button, 2, 1)
 
-        # Result label
         self.result_label = QLabel('')
         self.result_label.setFont(font)
         self.result_label.setAlignment(Qt.AlignCenter)
         self.result_label.setStyleSheet("color: #4CAF50; font-weight: bold;")
         layout.addWidget(self.result_label, 3, 0, 1, 2)
 
-        # Back to Homepage Button
         self.back_home_button = QPushButton('Back to Homepage')
         self.back_home_button.setFont(font)
         self.back_home_button.setToolTip('Exit to the home page')
