@@ -14,7 +14,6 @@ class AlgebraicSolver(QWidget):
         font = QFont()
         font.setPointSize(14)
 
-        # Styling for input labels and lines
         self.algebraic_input_label = QLabel('Enter your algebraic equation:')
         self.algebraic_input_label.setFont(font)
         layout.addWidget(self.algebraic_input_label)
@@ -33,21 +32,18 @@ class AlgebraicSolver(QWidget):
         self.variables_line.setPlaceholderText("Enter the variables in the equation, e.g., 'x, y'")
         layout.addWidget(self.variables_line)
 
-        # Solve Algebraic Equation Button
         self.solve_algebraic_button = QPushButton('Solve Algebraic Equation')
         self.solve_algebraic_button.setFont(font)
         self.solve_algebraic_button.setStyleSheet("background-color: #87CEEB; color: white;")
         self.solve_algebraic_button.clicked.connect(self.solve_algebraic_problem)
         layout.addWidget(self.solve_algebraic_button)
 
-        # Result label
         self.algebraic_result_label = QLabel('Result:')
         self.algebraic_result_label.setFont(font)
         self.algebraic_result_label.setAlignment(Qt.AlignCenter)
         self.algebraic_result_label.setStyleSheet("color: #4CAF50; font-weight: bold;")
         layout.addWidget(self.algebraic_result_label)
 
-        # Result text area
         self.algebraic_result_area = QTextEdit()
         self.algebraic_result_area.setFont(font)
         self.algebraic_result_area.setPlaceholderText('Answer will appear here.')
@@ -55,7 +51,6 @@ class AlgebraicSolver(QWidget):
         self.algebraic_result_area.setStyleSheet("background-color: #f0f0f0; border: 1px solid #87CEEB;")
         layout.addWidget(self.algebraic_result_area)
 
-        # Back to Homepage Button
         self.back_home_button = QPushButton('Back to Homepage')
         self.back_home_button.setFont(font)
         self.back_home_button.setToolTip('Exit to the home page')
